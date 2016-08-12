@@ -10,6 +10,7 @@ request({url: 'http://127.0.0.1:2992/labs/dplanner/_assets/stats.json', json: tr
         stats: stats,
         separateStylesheet: true,
         index: 'index',
+        email: 'smendenh@redhat.com',
         browserPath: '/labs/dplanner',
         prerender: false,
         defaultPort: 8080

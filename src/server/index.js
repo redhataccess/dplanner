@@ -181,9 +181,8 @@ module.exports = function(options) {
 
         // setup e-mail data with unicode symbols
         var mailOptions = {
-            from: '"Red Hat OpenStack Platform Deployment Planner(NO REPLY)"noreply@redhat.com', // sender address
-            // to: 'rhos-poc-help@redhat.com', // list of receivers
-            to: 'smendenh@redhat.com', // list of receivers
+            from: '"Red Hat OpenStack Platform Deployment Planner(NO REPLY)" noreply@redhat.com', // sender address
+            to: options.email || 'rhos-poc-help@redhat.com', // list of receivers
             cc: req.body.requesterMail,
             subject: `Request for POC Engagement, RHEL OSP ${req.body.version} + Director (${req.body.requester})`, // Subject line
             html: messageBody,

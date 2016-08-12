@@ -15,6 +15,7 @@ require("./index")({
     env: 'production',
     separateStylesheet: true,
     ipAddress: ipAddress,
+    email: 'rhos-poc-help@redhat.com',
     port: port,
     index: 'index',
     browserPath: '/labs/dplanner'
