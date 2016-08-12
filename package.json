@@ -10,8 +10,8 @@
     "server": "webpack-dev-server --config webpack-dev-server.config.js --history-api-fallback --progress --port 9000",
     "server-prod": "node --es_staging --harmony --harmony_shipping src/server/server-prod.js",
     "test-watch": "karma start --auto-watch --no-single-run",
-    "start": "npm run server-inline",
-    "start-prod": "npm run server-prod"
+    "start-dev": "npm run server-inline",
+    "start": "npm run server-prod"
   },
   "author": "Samuel Mendenhall <smendenh@redhat.com>",
   "license": "MIT",
