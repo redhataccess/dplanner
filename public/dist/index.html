@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="bootstrap3 legacyfalse chrometwo" xmlns:ng="http://angularjs.org" xmlns:rha="http://access.redhat.com">
+<head>
+    <title>Deployment Planner</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ng-table/0.3.3/ng-table.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-aNUYGqSUL9wG/vP7+cWZ5QOM4gsQou3sBfWRr/8S3R1Lv0rysEmnwsRKMbhiQX/O" crossorigin="anonymous">
+
+    <script type="text/javascript" src="/webassets/avalon/j/lib/require.js"></script>
+    <script type="text/javascript">
+        // Bounce early if we don't find a cookie
+        if (!window.location.host.match(/localhost/) && !document.cookie.match(/rh_user=(".*")/)) {
+            window.location = window.location.protocol + "//" + window.location.host + "/login?redirectTo=" + document.URL;
+        }
+    </script>
+
+
+    
+    <link href="/labs/dplanner/static/dist/main.css?a99e181a1f007c9ef60f6271df63565c&16f782bee518885a5f75" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div id="chrometwo" style="width: 100%;">
+    <div id="chromed-app-content">
+        <div id="content" />
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+    window.chrometwo_require([
+        'jquery'
+    ], function(jq) {
+        'use strict';
+        window.jQuery = jq;
+        window.$ = jq;
+
+        jq.support.cors = true;
+
+        chrometwo_ready(function () {
+
+            // Have to do this manually until https://github.com/MrRio/jsPDF/pull/774 is fixed then we can use webpack
+            var jsPdfScript = document.createElement('script');
+            jsPdfScript.type = 'text/javascript';
+            jsPdfScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.2.61/jspdf.min.js';
+            document.body.appendChild(jsPdfScript);
+
+            var script;
+            
+            script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = '/labs/dplanner/static/dist/main.js?83d7962b4674a1ad6bfc&16f782bee518885a5f75';
+            document.body.appendChild(script);
+            
+        });
+    });
+
+</script>
+</body>
+</html>
