@@ -72,7 +72,6 @@ class Home extends Component {
 
     renderSavedOptions(plans) {
         const options = _.map(plans, p => {
-            console.debug(`key: ${p.id}`);
             return (
                 <option key={p.id} value={p.id}>{Home.renderPlanDisplay(p)}</option>
             )
@@ -80,7 +79,6 @@ class Home extends Component {
 
         // If we are creating a new plan
         if (window.location.pathname.match(/\/labs\/dplanner\/new/)) {
-            console.debug(`key: new`);
             options.unshift(<option value="new">Select a Plan</option>);
         }
         return options;

@@ -69,7 +69,7 @@ class AdditionalSupportingDocuments extends Component {
                                 <Col xs={12}>
                                     <div className="alert alert-info alert-w-icon">
                                         <i className="fa fa-info-circle" />&nbsp;
-                                        Please send the diagrams of the environment to rhos-pos-help@redhat.com.
+                                        Please send the diagrams of the environment to <a href="mailto:rhos-pos-help@redhat.com">rhos-pos-help@redhat.com</a>.
                                     </div>
                                 </Col>
                             </Row>

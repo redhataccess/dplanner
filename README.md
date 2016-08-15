@@ -10,8 +10,8 @@
 
 ## Local development
 
-    npm run start
     accessproxy
+    npm run start-dev
     http://prod.foo.redhat.com:1337/labs/dplanner
     
 Make sure in .git/config to add a remote for itos for pushing.
